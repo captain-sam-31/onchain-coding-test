@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { TabBar } from "../../components/TabBar";
-import { TopBar } from "../../components/TopBar";
+import { TabBar } from "@/components/TabBar";
+import { TopBar } from "@/components/TopBar";
 
 export const Layout = () => {
   const location = useLocation();

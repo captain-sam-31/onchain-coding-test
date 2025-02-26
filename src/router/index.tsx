@@ -1,7 +1,7 @@
 import { Navigate, RouteObject } from "react-router-dom";
-import { Layout } from "../pages/layout";
-import { Dashboard } from "../pages/dashboard";
-import { Page404 } from "../pages/page404";
+import { Layout } from "@/pages/layout";
+import { Dashboard } from "@/pages/dashboard";
+import { Page404 } from "@/pages/page404";
 
 export const routes: RouteObject[] = [
   {

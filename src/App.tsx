@@ -3,9 +3,7 @@ import { routes } from "./router";
 import { ConfigProvider } from "antd";
 import { themeConf } from "./constants/theme";
 
-const AppRoutes = () => {
-  return useRoutes(routes);
-};
+const AppRoutes = () => useRoutes(routes);
 
 function App() {
   return (

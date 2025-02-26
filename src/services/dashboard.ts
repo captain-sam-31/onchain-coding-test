@@ -1,7 +1,7 @@
-import request from "../utils/request";
-import { API } from "../constants/api";
-import type { ApiResponse } from "../types/api";
-import type { Currency, ExchangeRate, WalletBalance } from "../types/dashboard";
+import request from "@/utils/request";
+import { API } from "@/constants/api";
+import type { ApiResponse } from "@/types/api";
+import type { Currency, ExchangeRate, WalletBalance } from "@/types/dashboard";
 
 // 实际项目中，需使用后端提供的api
 export const walletAPI = {

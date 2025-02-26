@@ -1,12 +1,13 @@
 import { useMemo } from "react";
-import { useWallet } from "../../hooks/useWallet";
+import { useWallet } from "@/hooks/useWallet";
 import { Header } from "./components/Header";
 import { CurrencyList } from "./components/CurrencyList";
-import { message, Spin } from "antd";
+import { Spin } from "antd";
 
 export const Dashboard = () => {
   const { balances, currencies, rates, isLoading } = useWallet();
 
+  // 计算总资产
   const totalAssets = useMemo(() => {
     return balances.reduce((total, balance) => {
       const rate = rates.find(
@@ -17,22 +18,10 @@ export const Dashboard = () => {
     }, 0);
   }, [balances, rates]);
 
-  const handleSend = () => {
-    message.info("点击发送");
-  };
-
-  const handleReceive = () => {
-    message.info("点击接收");
-  };
-
   return (
     <Spin spinning={isLoading}>
       <div className="h-[calc(100vh-6rem)] flex flex-col">
-        <Header
-          totalAssets={totalAssets}
-          onSend={handleSend}
-          onReceive={handleReceive}
-        />
+        <Header totalAssets={totalAssets} />
         <CurrencyList
           balances={balances}
           currencies={currencies}

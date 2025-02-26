@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import { useWalletStore } from "../store/wallet";
-import { REFRESH_INTERVAL } from "../constants/config";
+import { useWalletStore } from "@/store/wallet";
+import { REFRESH_INTERVAL } from "@/constants/config";
 
 export const useWallet = () => {
   const {

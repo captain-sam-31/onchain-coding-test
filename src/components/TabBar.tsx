@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import DeFiSVG from "../assets/DeFiSVG";
-import WalletSVG from "../assets/WalletSVG";
+import DeFiSVG from "@/assets/DeFiSVG";
+import WalletSVG from "@/assets/WalletSVG";
+import { memo } from "react";
 
 interface TabBarProps {
   activeTab: "wallet" | "defi";
 }
 
-export const TabBar = ({ activeTab }: TabBarProps) => {
+export const TabBar = memo(({ activeTab }: TabBarProps) => {
   const navigate = useNavigate();
 
   const handleTabChange = (tab: "wallet" | "defi") => {
@@ -35,4 +36,4 @@ export const TabBar = ({ activeTab }: TabBarProps) => {
       </div>
     </div>
   );
-};
+});

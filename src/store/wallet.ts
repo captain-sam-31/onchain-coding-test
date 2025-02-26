@@ -1,10 +1,10 @@
 import { create } from "zustand";
-import type { Currency, ExchangeRate, WalletBalance } from "../types/dashboard";
+import type { Currency, ExchangeRate, WalletBalance } from "@/types/dashboard";
 import {
   getWalletBalance,
   getSupportedCurrencies,
   getExchangeRates,
-} from "../services/dashboard";
+} from "@/services/dashboard";
 
 interface WalletStore {
   balances: WalletBalance[];
